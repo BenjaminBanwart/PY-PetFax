@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pets Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to PetFax</h1>
+            <div class="pets-container">
+                {% for pet in pets %}
+                <div class="pet">
+                    <a href="/pets/{{ pet.pet_id }}">
+                        <h2>{{ pet.pet_name }}</h2>
+                        <img src="{{ pet.pet_photo }}" alt="Photo of a pet"/>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="callout">
+                <a href="/facts/new">Have something to say?</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="pets-container">
+                <h1>{{ pet.pet_name }}</h1>
+                <div class="show-pet">
+                    <img src="{{ pet.pet_photo }}" alt="Photo of a pet"/>
+                </div>
+            </div>
+            <div class="callout">
+                <p>{{ pet.pet_fact }}</p>
+            </div>
+            <a href="/pets">Back</a>
+        </div>
+    </body>
+</html>

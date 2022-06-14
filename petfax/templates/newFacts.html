@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facts Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to the facts page!</h1>
+            <div class="facts-container">
+                <form>
+                    <label for="userName">
+                        <H2>Name</H2>
+                    </label>
+                    <input name="userName" type="text">
+                    <br/>
+                    <label for="fact">
+                        <H2>Fact</H2>
+                    </label>
+                    <textarea name="fact"></textarea>
+                    <br/>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <a href="/pets">Back</a>
+        </div>
+    </body>
+</html>
