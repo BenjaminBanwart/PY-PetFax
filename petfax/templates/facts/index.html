@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facts Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>UserFax</h1>
+            {% for fact in facts %}
+                <h4>Submitted by {{ fact.submitter }}</h4>
+                {{ fact.fact }}
+            {% endfor %}
+            <a href="/facts/new">Back</a>
+        </div>
+    </body>
+</html>
